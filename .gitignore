@@ -63,3 +63,6 @@ packages/
 
 # visual studio database projects
 *.dbmdl
+
+# node
+node_modules
