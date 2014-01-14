@@ -1,6 +1,7 @@
 using System;
 using Microsoft.Owin.Hosting;
 using Owin;
+using Owin.GoogleAnalytics;
 
 namespace NancyTest
 {
@@ -22,9 +23,8 @@ namespace NancyTest
 	public class Startup{
 		public void Configuration(IAppBuilder app)
 		{
-
 			//app.UseWelcomePage ();
-			app.Use<Owin.GoogleAnalytics.GoogleAnalyticsMiddleware> ("UA-0000001");
+			app.UseGoogleAnalytics("UA-0000001");
 			app.UseNancy();
 		}
 	}
