@@ -6,6 +6,9 @@ using Microsoft.Owin.Logging;
 namespace Owin.GoogleAnalytics
 {
 	/// <summary>
+	/// Thanks to the project Glimpse : 
+	/// https://github.com/Glimpse/Glimpse/blob/version-2/source/Glimpse.Core/PreBodyTagInjectionStream.cs
+	/// 
 	/// This class will inject some html snippet (most likely the Glimpse Client script tags, but it can be anything) in the resulting HTML output.
 	/// It will look for the last occurrence of the &lt;/body&gt; tag and inject the snippet right before that tag.
 	/// An instance of this class should be assigned as a filter to the outgoing response so that the injection can be done once all the rendering is completed.
